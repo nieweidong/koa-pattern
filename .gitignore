@@ -5,9 +5,6 @@
 logs
 *.log
 
-# IDE
-.editorconfig
-
 # Runtime data
 pids
 *.pid
