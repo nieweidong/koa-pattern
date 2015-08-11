@@ -9,7 +9,7 @@
  * 	这里的hbs 表示后缀名对应的模板解析引擎
  */
 module.exports = {
-  app1: {
+  demo: {
     staticpath: 'testpublic',
     viewspath: 'testviews',
     default: 'hbs',
@@ -17,9 +17,13 @@ module.exports = {
       hbs: 'handlebars'
     }
   },
+  app1: {
+    default: 'hbs',
+    map: {
+      hbs: 'handlebars'
+    }
+  },
   app2: {
-    staticpath: 'pub',
-    viewspath: 'v',
     default: 'hbs',
     map: {
       hbs: 'handlebars'
