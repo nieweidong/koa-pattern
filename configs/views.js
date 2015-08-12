@@ -12,10 +12,6 @@ module.exports = {
   demo: {
     staticpath: 'testpublic',
     viewspath: 'testviews',
-    default: 'hbs',
-    map: {
-      hbs: 'handlebars'
-    }
   },
   app1: {
     default: 'hbs',
@@ -23,16 +19,6 @@ module.exports = {
       hbs: 'handlebars'
     }
   },
-  app2: {
-    default: 'hbs',
-    map: {
-      hbs: 'handlebars'
-    }
-  },
-  app3: {
-    default: 'hbs',
-    map: {
-      hbs: 'handlebars'
-    }
-  }
+  app2: {},
+  app3: {}
 }
