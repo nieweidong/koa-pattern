@@ -2,28 +2,25 @@
  * koa-pattern
  * @nieweidong
  */
-var koa = require('koa');
-var send = require('koa-send');
-var serve = require('koa-static');
-var router = require('koa-router')();
+'use strict';
 
-var app = koa();
+var application = require('./lib/application');
+var serve = require('koa-static');
+
+var app = application();
+
+// 必须先执行。初始化项目目录和项目配置
+app.init();
 
 // Static Middleware
+// 全局的公共目录
 app.use(serve('public'));
 
-// logger
-app.use(function *(next){
-  var start = new Date;
-  yield next;
-  var ms = new Date - start;
-  console.log('%s %s - %s', this.method, this.url, ms);
+var _port = app.configs.global.port;
+app.listen(_port, function() {
+  console.log('listen on', _port);
 });
 
-router.get('/', function *(next) {
-  this.body = 'hello world';
-});
-
-app.use(router.routes())
-
-app.listen(8013);
+// TODO
+// ./configs/views.js 这个文件得写几个对应的demo
+// ./public 这个文件得写对应的demo
