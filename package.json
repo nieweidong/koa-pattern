@@ -4,14 +4,14 @@
   "description": "koa pattern",
   "main": "server.js",
   "scripts": {
-    "start": "supervisor --harmony server.js"
+    "start": "NODE_ENV=local supervisor --harmony server.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/nieweidong/koa-pattern"
   },
   "engines": {
-    "node": ">= 0.11.16",
+    "node": ">= 0.12.0",
     "iojs": ">= 1.0.0"
   },
   "dependencies": {
