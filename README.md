@@ -10,7 +10,7 @@
 
 ### 环境要求
 
-koa 依赖支持 generator 的 Node 环境，准确来说，是 ```node >= 0.11.9``` 的环境。
+koa 依赖支持 generator 的 Node 环境，准确来说，是 ```node >= 0.12.x``` 的环境。
 
 ### 目录结构
 
